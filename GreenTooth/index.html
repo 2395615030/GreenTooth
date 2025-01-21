@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenTooth 工作室</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 下拉菜单样式 */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* 平滑滚动效果 */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>欢迎来到 GreenTooth 工作室</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">团队成员</a>
+                    <div class="dropdown-content">
+                        <a href="0x0.html">0x0</a>
+                        <a href="xxc.html">xxc</a>
+                        <a href="hjh.html">hjh</a>
+                    </div>
+                </li>
+                <li><a href="projects.html">项目介绍</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>首页</h2>
+            <p>GreenTooth 工作室是一家专注于 AI 研究的创新团队。我们由一群充满激情和才华的专业人士组成，致力于为客户提供高质量、个性化的服务。</p>
+            <p>我们的团队成员在 AI 领域拥有丰富的经验和专业知识，涵盖了从算法研究到应用开发的各个方面。我们相信创新是推动世界前进的动力，因此我们不断探索新的技术和方法，以满足客户不断变化的需求。</p>
+            <p>在 GreenTooth，我们注重团队合作和知识共享。我们鼓励成员之间的交流和协作，以激发更多的创意和灵感。我们相信，只有通过团队的共同努力，才能实现更大的目标。</p>
+            <p>如果您对 AI 感兴趣，或者有任何与 AI 相关的项目需求，欢迎随时联系我们。我们期待与您合作，共同探索 AI 的无限可能！</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 <a href="https://greentooth.online">GreenTooth</a> 工作室. 版权所有. </p>
+    </footer>
+
+    <script>
+        // 平滑滚动效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 下拉菜单动画
+        const dropdown = document.querySelector('.dropdown');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        dropdown.addEventListener('mouseenter', () => {
+            dropdownContent.style.display = 'block';
+        });
+
+        dropdown.addEventListener('mouseleave', () => {
+            dropdownContent.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

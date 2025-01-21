@@ -335,8 +335,6 @@ var content = `
 4. 优化 页面加载缓慢
 5. 优化 音乐延迟加载
 
-主页:  https://www.imsyy.top
-Github:  https://github.com/imsyy/home
 `
 console.log(`%c${title1} %c${title2}
 %c${content}`, styleTitle1, styleTitle2, styleContent)
